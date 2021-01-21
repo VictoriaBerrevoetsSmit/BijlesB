@@ -79,8 +79,8 @@ naam_function <- function(x=4){
 
 model <- function(tijd, begintoestand, parameters){
   with(as.list(c(begintoestand, parameters)), {
-    dxdt <- a*x - b*x*y
-    dydt <- -c*x + d*x*y
+    dxdt <- a*x^2 - b*x*y
+    dydt <- -c*x^3 + d*x*y^3
     return(list(c(dxdt, dydt)))
   })
 }
